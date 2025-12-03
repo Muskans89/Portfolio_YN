@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
 
       // Info cards animation
       gsap.fromTo(
-        infoRef.current?.querySelectorAll(".info-card"),
+        infoRef.current!.querySelectorAll(".info-card"),
         { opacity: 0, y: 40 },
         {
           opacity: 1,
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
 
       // Form inputs animation
       gsap.fromTo(
-        formRef.current?.querySelectorAll("input, textarea"),
+        formRef.current!.querySelectorAll("input, textarea"),
         { opacity: 0, scale: 0.95 },
         {
           opacity: 1,

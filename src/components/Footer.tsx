@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Github, FacebookIcon, Mail, ArrowUp, Facebook } from "lucide-react";
+import { Linkedin, Github,Mail, ArrowUp, Facebook } from "lucide-react";
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
