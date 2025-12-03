@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div>
             <h3 className="font-heading text-2xl font-black text-off-white mb-2">
-              Yashvi Nadga
+              Yashvi Nagda
             </h3>
             <p className="text-sm text-light-gray font-body">
               Business Analyst | Data Strategist | Problem Solver
