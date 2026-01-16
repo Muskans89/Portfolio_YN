@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Github,Mail, ArrowUp, Facebook } from "lucide-react";
+import { Linkedin, Github, ArrowUp, Facebook, Youtube } from "lucide-react";
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Linkedin, href: "www.linkedin.com/in/yashvi-nagda", label: "LinkedIn" },
     { icon: Github, href: "#", label: "GitHub" },
-    { icon: Facebook, href: "#", label: "Twitter" },
-    { icon: Mail, href: "#", label: "Email" },
+    { icon: Facebook, href: "https://www.facebook.com/Yashvi20081999?mibextid=wwXIfr&rdid=k66fKLxEn16Dh73e&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F166bPfGhfv%2F%3Fmibextid%3DwwXIfr#", label: "Twitter" },
+    { icon: Youtube, href: "https://www.youtube.com/@yashvinagda3408", label: "Email" },
   ];
 
   const navLinks = [
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               Yashvi Nagda
             </h3>
             <p className="text-sm text-light-gray font-body">
-              Business Analyst | Data Strategist | Problem Solver
+              Business Analyst | Social Media Strategist
             </p>
           </div>
 

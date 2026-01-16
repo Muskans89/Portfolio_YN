@@ -5,10 +5,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Linkedin,
-  Github,
-  Facebook,
-  MailIcon,
   Send,
   CheckCircle,
   Zap,
@@ -109,21 +105,48 @@ const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormStatus("loading");
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setFormStatus("loading");
 
-    // Simulate form submission
+  try {
+    const response = await fetch("http://localhost:3001/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send email");
+    }
+
+    setFormStatus("success");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
+    // reset UI after 3 sec (same behavior as before)
     setTimeout(() => {
-      setFormStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormStatus("idle");
+    }, 3000);
 
-      // Reset after 3 seconds
-      setTimeout(() => {
-        setFormStatus("idle");
-      }, 3000);
-    }, 1500);
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong. Please try again.");
+    setFormStatus("idle");
+  }
+};
+
 
   const contactInfo = [
     {
@@ -149,33 +172,7 @@ const Contact: React.FC = () => {
     },
   ];
 
-  const socialLinks = [
-    {
-      icon: Linkedin,
-      href: "#",
-      label: "LinkedIn",
-      color: "cyan",
-    },
-    {
-      icon: Github,
-      href: "#",
-      label: "GitHub",
-      color: "electric-blue",
-    },
-    {
-      icon: Facebook,
-      href: "#",
-      label: "Twitter",
-      color: "ice-blue",
-    },
-    {
-      icon: MailIcon,
-      href: "#",
-      label: "Twitter",
-      color: "ice-blue",
-    },
-  ];
-
+  
   return (
     <section
       id="contact"
@@ -345,34 +342,7 @@ const Contact: React.FC = () => {
               );
             })}
 
-            {/* Social Links */}
-            <div className="pt-4">
-              <h4 className="font-heading text-sm font-bold text-navy mb-4">
-                Connect On
-              </h4>
-              <div className="flex gap-3">
-                {socialLinks.map((link, index) => {
-                  const Icon = link.icon;
-                  return (
-                    <a
-                      key={index}
-                      href={link.href}
-                      aria-label={link.label}
-                      className="group relative"
-                    >
-                      <div
-                        className={`w-12 h-12 rounded-lg bg-${link.color}/15 border border-${link.color}/30 flex items-center justify-center hover:bg-${link.color}/25 hover:border-${link.color}/60 transition-all duration-300 group-hover:scale-110`}
-                      >
-                        <Icon className={`w-5 h-5 text-${link.color}`} />
-                      </div>
-                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-navy text-off-white text-xs font-body px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        {link.label}
-                      </div>
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+            
 
             {/* Quick Response Message */}
             <div className="mt-8 pt-8 border-t border-light-gray/30">

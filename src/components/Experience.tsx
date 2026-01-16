@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Award, Briefcase, Calendar, MapPin, ArrowRight } from "lucide-react";
-import Exp1 from "../assets/img2.png";
+import Exp1 from "../assets/pic3.jpg";
 import Exp2 from "../assets/img3.png";
-import Exp3 from "../assets/img1.png";
+import Exp3 from "../assets/pic1.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Img from "../assets/img1.png"; 
+import Img from "../assets/pic2.jpg"; 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Briefcase, Globe, Heart, Camera, Users } from 'lucide-react';
