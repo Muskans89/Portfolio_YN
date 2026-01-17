@@ -351,7 +351,7 @@ const HeroAlternative: React.FC = () => {
       <div className="fixed right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 sm:gap-5 md:gap-7 z-50">
         {/* GitHub */}
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/YashviNagda20"
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border-2 border-cyan/70 flex items-center justify-center text-cyan hover:bg-cyan/20 hover:border-cyan hover:scale-125 hover:shadow-lg hover:shadow-cyan/60 transition-all duration-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]"

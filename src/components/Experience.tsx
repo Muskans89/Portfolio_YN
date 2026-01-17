@@ -348,7 +348,7 @@ const Experience: React.FC = () => {
                     <div className={`absolute -inset-8 bg-gradient-to-br ${exp.accentGrad} to-transparent rounded-2xl blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-500`}></div>
 
                     {/* Image container */}
-                    <div className="relative overflow-hidden rounded-2xl border-2 border-cyan/30 shadow-2xl group-hover:border-cyan/60 transition-all duration-300">
+                    <div className="relative overflow-hidden  border-2 border-cyan/30 shadow-2xl group-hover:border-cyan/60 transition-all duration-300">
                       {/* Decorative corner accents */}
                       <div className="absolute -top-4 -right-4 w-28 h-28 border-2 border-cyan/40 rounded-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none z-10"></div>
                       <div className="absolute -bottom-4 -left-4 w-24 h-24 border-2 border-electric-blue/40 rounded-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none z-10"></div>

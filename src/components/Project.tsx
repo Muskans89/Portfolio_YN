@@ -188,7 +188,7 @@ const Projects: React.FC = () => {
               className="group"
             >
               {/* Main Card Container */}
-              <div className="relative h-full flex flex-col rounded-2xl sm:rounded-3xl overflow-hidden border border-cyan/20 hover:border-cyan/50 transition-all duration-300 bg-gradient-to-br from-dark-gray/40 to-dark-gray/10 backdrop-blur-md shadow-xl hover:shadow-2xl hover:shadow-cyan/10">
+              <div className="relative h-full flex flex-col  overflow-hidden border border-cyan/20 hover:border-cyan/50 transition-all duration-300 bg-gradient-to-br from-dark-gray/40 to-dark-gray/10 backdrop-blur-md shadow-xl hover:shadow-2xl hover:shadow-cyan/10">
                 {/* Image Section */}
                 <div className="relative w-full h-48 sm:h-64 md:h-80 overflow-hidden bg-dark-gray">
                   {/* Image */}

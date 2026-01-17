@@ -206,7 +206,7 @@ const JourneySection: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Image */}
             <div ref={imageRef}>
-              <div className="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
+              <div className="w-full h-[350px] md:h-[450px] overflow-hidden shadow-lg">
                 <img
                   src={Img}
                   alt="Yashvi"

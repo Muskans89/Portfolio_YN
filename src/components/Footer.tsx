@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: "www.linkedin.com/in/yashvi-nagda", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Github, href: "https://github.com/YashviNagda20", label: "GitHub" },
     { icon: Facebook, href: "https://www.facebook.com/Yashvi20081999?mibextid=wwXIfr&rdid=k66fKLxEn16Dh73e&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F166bPfGhfv%2F%3Fmibextid%3DwwXIfr#", label: "Twitter" },
     { icon: Youtube, href: "https://www.youtube.com/@yashvinagda3408", label: "Email" },
   ];
